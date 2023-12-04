@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's in my head</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <div class="imgcont">
+          <img src="./src/brain.png" alt="logo" />
+        </div>
+        <div class="welcome">
+          <span>W</span>
+          <span>E</span>
+          <span>L</span>
+          <span>C</span>
+          <span>O</span>
+          <span>M</span>
+          <span>E</span>
+          &nbsp;&nbsp;
+          <span>T</span>
+          <span>O</span>
+          &nbsp;&nbsp;
+          <span>M</span>
+          <span>Y</span>
+          &nbsp;&nbsp;
+          <span>B</span>
+          <span>R</span>
+          <span>A</span>
+          <span>I</span>
+          <span>N</span>
+        </div>
+      </div>
+      <div class="wru">WRU?</div>
+    </div>
+    <div class="content">
+      <!-- 문 -->
+      <button type="button" id="visitorsBtn" class="btn">
+        <img class="project" src="./src/Visitors.png" alt="visitors" />
+      </button>
+
+      <div class="label" id="visitorLabel">
+        <div class="titleCont">
+          <p class="title">Visitors</p>
+          <p class="day">2023/09/14</p>
+        </div>
+        <p class="textCont">누군가 두드리는 노크소리. 문 뒤에 누가 있을까?</p>
+      </div>
+
+      <!-- 바나나 -->
+      <button type="button" id="BananaBtn" class="btn">
+        <img class="projectBanana" src="./src/Banana.png" alt="banana" />
+      </button>
+
+      <div class="label" id="bananaLabel">
+        <div class="titleCont">
+          <p class="title">Custom-Banana</p>
+          <p class="day">2023/09/20</p>
+        </div>
+        <p class="textCont">
+          개성 있는 시대! 이제는 바나나도 개성 넘치게 꾸며보세요.
+        </p>
+      </div>
+
+      <!-- 햄버거 -->
+      <button type="button" id="hamburgerBtn" class="btn">
+        <img src="./src/Hamburger.png" alt="Hamburger" />
+      </button>
+
+      <div class="label" id="hamburgerLabel">
+        <div class="titleCont">
+          <p class="title">Hamburger</p>
+          <p class="day">2023/10/19</p>
+        </div>
+        <p class="textCont">
+          내가 좋아하는 것만 잔뜩 햄버거. 마음껏 만들고 먹을 수 있다.
+        </p>
+      </div>
+      <!-- clock -->
+      <button type="button" id="clockBtn" class="btn">
+        <img class="sizeMproject" src="./src/Clock.png" alt="Clock" />
+      </button>
+
+      <div class="label" id="clockLabel">
+        <div class="titleCont">
+          <p class="title">LAZY-ALARM</p>
+          <p class="day">2023/10/05</p>
+        </div>
+        <p class="textCont">
+          과제를 해야할 때 자꾸만 침대로 가고 싶고, 눕고싶나요? 컴퓨터 앞에
+          딱!붙어 있게 만들어드릴게요.
+        </p>
+      </div>
+
+      <!-- Adjective Gene -->
+      <button type="button" id="geneBtn" class="btn">
+        <img class="projectBanana" src="./src/Gene.png" alt="Gene" />
+      </button>
+
+      <div class="label" id="geneLabel">
+        <div class="titleCont">
+          <p class="title">Adjective Gene</p>
+          <p class="day">2023/11/25</p>
+        </div>
+        <p class="textCont">
+          디자이너는 자신만의 고유함을 기반으로 다채로운 즐거움과 가능성을
+          제시합니다다.산업디자인전공 제41회 졸업전시회 &lt;형용사적 유전자
+          adjective gene&gt;에서는 자신만의 형용사적 유전자들을 발견해 온
+          전시자들의 태도들을 엿볼 수 있습니다.
+        </p>
+      </div>
+    </div>
+
+    <!-- 웹 삽입 -->
+    <div id="reactCarousel" class="Carousel">
+      <!-- 캐러셀 이미지 삽입 -->
+      <div class="carousel_wrapper">
+        <div class="carousel_slide">
+          <iframe
+            src="https://joohyeji.github.io/Visitors/"
+            title="문"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+        <div class="carousel_slide">
+          <iframe
+            src="https://joohyeji.github.io/Custom-Banana/"
+            title="바나나"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+        <div class="carousel_slide">
+          <iframe
+            src="https://joohyeji.github.io/Hamburger/"
+            title="햄버거"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+        <div class="carousel_slide">
+          <iframe
+            src="https://joohyeji.github.io/LAZY-ALARM/"
+            title="알람"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+        <div class="carousel_slide">
+          <iframe
+            src='http://stid-gradshow.seoultech.ac.kr/'
+            title="졸전"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- 캐러셀 사이드 버튼 -->
+      <div class="carousel_button_container">
+        <button type="button" class="carousel_prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-chevron-double-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </button>
+        <button type="button" class="carousel_next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-chevron-double-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- 캐러셀 중앙 버튼 -->
+      <div class="carousel_pagination">
+        <div class="carousel_circle"></div>
+        <div class="carousel_circle"></div>
+        <div class="carousel_circle"></div>
+        <div class="carousel_circle"></div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="footer">
+      <span>what’s in my head / ⓒ Joohyeji</span>
+    </div>
+
+    <script>
+      // 버튼 클릭시 블러팝업
+      document.querySelectorAll('.btn').forEach((v, i) => {
+        v.addEventListener('click', (e) => {
+          const popup = document.querySelector('.Carousel');
+          popup.style.display = 'block';
+
+          popup.addEventListener('click', (e) => {
+            popup.style.display = 'none';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
