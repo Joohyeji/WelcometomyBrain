@@ -73,7 +73,7 @@
 
       <!-- 햄버거 -->
       <button type="button" id="hamburgerBtn" class="btn">
-        <img src="./src/Hamburger.png" alt="Hamburger" />
+        <img class="sizeMproject" src="./src/Hamburger.png" alt="Hamburger" />
       </button>
 
       <div class="label" id="hamburgerLabel">
@@ -121,100 +121,68 @@
     </div>
 
     <!-- 웹 삽입 -->
-    <div id="reactCarousel" class="Carousel">
-      <!-- 캐러셀 이미지 삽입 -->
-      <div class="carousel_wrapper">
-        <div class="carousel_slide">
-          <iframe
+    <!-- 문 - https://joohyeji.github.io/Visitors/
+햄버거 - https://joohyeji.github.io/Hamburger/
+바나나 - https://joohyeji.github.io/Custom-Banana/
+시계 - https://joohyeji.github.io/LAZY-ALARM/ -->
+    <div class="Carousel">
+      <section id="slider">
+        <input type="radio" name="slider" id="s1" checked />
+        <input type="radio" name="slider" id="s2" />
+        <input type="radio" name="slider" id="s3" />
+        <input type="radio" name="slider" id="s4" />
+        <input type="radio" name="slider" id="s5" />
+
+        <label for="s1" id="slide1"
+          ><iframe
             src="https://joohyeji.github.io/Visitors/"
             title="문"
             width="100%"
             height="100%"
           ></iframe>
-        </div>
-        <div class="carousel_slide">
-          <iframe
+        <!-- <img src="./src/Thumbnail1.png" /> -->
+      </label>
+
+        <label for="s2" id="slide2"
+          ><iframe
             src="https://joohyeji.github.io/Custom-Banana/"
             title="바나나"
             width="100%"
             height="100%"
           ></iframe>
-        </div>
-        <div class="carousel_slide">
-          <iframe
+        <!-- <img src="./src/Thumbnail2.png" /> -->
+        </label>
+
+        <label for="s3" id="slide3"
+          ><iframe
             src="https://joohyeji.github.io/Hamburger/"
             title="햄버거"
             width="100%"
             height="100%"
           ></iframe>
-        </div>
-        <div class="carousel_slide">
-          <iframe
+        <!-- <img src="./src/Thumbnail3.png" /> -->
+        </label>
+
+        <label for="s4" id="slide4"
+          ><iframe
             src="https://joohyeji.github.io/LAZY-ALARM/"
             title="알람"
             width="100%"
             height="100%"
           ></iframe>
-        </div>
-        <div class="carousel_slide">
-          <iframe
-            src='http://stid-gradshow.seoultech.ac.kr/'
+        <!-- <img src="./src/Thumbnail4.png" /> -->
+        </label>
+
+        <label for="s5" id="slide5"
+          ><iframe
+            src="http://stid-gradshow.seoultech.ac.kr/"
             title="졸전"
             width="100%"
             height="100%"
           ></iframe>
-        </div>
-      </div>
-
-      <!-- 캐러셀 사이드 버튼 -->
-      <div class="carousel_button_container">
-        <button type="button" class="carousel_prev">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            class="bi bi-chevron-double-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-            />
-          </svg>
-        </button>
-        <button type="button" class="carousel_next">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            class="bi bi-chevron-double-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- 캐러셀 중앙 버튼 -->
-      <div class="carousel_pagination">
-        <div class="carousel_circle"></div>
-        <div class="carousel_circle"></div>
-        <div class="carousel_circle"></div>
-        <div class="carousel_circle"></div>
-      </div>
+        <!-- <img src="./src/Thumbnail5.png" /> -->
+        </label>
+      </section>
     </div>
 
     <!-- 푸터 -->
