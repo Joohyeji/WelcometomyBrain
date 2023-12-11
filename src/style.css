@@ -3,12 +3,13 @@
   margin: 0;
   padding: 0;
   font-family: 'Alata', sans-serif;
+  cursor: none;
 }
 body {
   margin: 0;
 }
 button{
-  cursor: pointer;
+  /* cursor: pointer; */
   border: none;
   background-color: transparent;
 }
@@ -150,6 +151,21 @@ img {
   z-index: 1;
 }
 
+#closeBtn{
+  position: absolute;
+  right: 2vw; top: 2vw;
+  /* cursor: pointer; */
+  color: #000;
+}
+#closeBtn:hover{
+  color: red;
+}
+
+#carouselLabel{
+  position: absolute;
+  right: 15vw;
+  top: 37vw;
+}
 
 .footer {
   position: fixed; bottom: 0;
@@ -187,7 +203,7 @@ input[type=radio] {
   margin: 0 15px 0 0;
   opacity: 0.4;
   transform: translateX(-83px);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 
@@ -200,13 +216,14 @@ input[type=radio]:checked {
 }
 
 
-iframe html, iframe body{
+iframe html, iframe body, img html, img body{
   border: none;
   overflow: hidden;
 }
 
 #slider label,
-#slider label iframe {
+#slider label iframe,
+#slider label img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -215,8 +232,8 @@ iframe html, iframe body{
   color: white;
   font-size: 70px;
   font-weight: bold;
-  border-radius: 15px;
-  cursor: pointer;
+  border-radius: 25px;
+  /* cursor: pointer; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,4 +293,144 @@ iframe html, iframe body{
     #s5:checked ~ #slide4 {
   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
   transform: translate3d(-20%, 0, -100px);
+}
+
+/* 라디오라벨 */
+[type="radio"], span {
+  vertical-align: middle;
+}
+
+[type="radio"] {
+  appearance: none;
+  border: max(2px, 0.1em) solid black;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.5s ease-in-out;
+}
+
+[type="radio"]:checked {
+  border: 0.6em solid black;
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted black;
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) rgb(94, 255, 0,0.8);
+}
+/* 
+[type="radio"]:hover + span {
+  
+} */
+
+[type="radio"]:disabled {
+  background-color: black;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* 마우스효과 */
+.mouse__wrap {
+  cursor: none;
+}
+.mouse__cursor {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(94, 255, 0,0.8);
+  user-select: none;
+  pointer-events: none;
+  transition: 
+      background-color 0.3s,
+      border-color 0.3s,
+      transform 0.6s,
+      boder-radius 0.3s,
+      border 0.3s
+  ;
+}
+.mouse__cursor img{
+  width: 50px;
+  height: auto;
+}
+.mouse__cursor.s1 {
+  background-color: rgba(151, 24, 24, 0.377);
+  border-color: rgba(231, 18, 18, 0.438);
+}
+.mouse__cursor.s2 {
+  background-color: rgba(151, 100, 24, 0.541);
+  border-color: rgba(231, 132, 18, 0.575);
+  transform: scale(2) rotateY(360deg);
+}
+.mouse__cursor.s3 {
+  background-color: rgba(151, 149, 24, 0.541);
+  border-color: rgba(227, 231, 18, 0.575);
+  transform: scale(1.5) rotateX(545deg);
+}
+.mouse__cursor.s4 {
+  background-color: rgba(54, 151, 24, 0.541);
+  border-color: rgba(18, 231, 64, 0.575);
+  transform: scale(10);
+}
+.mouse__cursor.s5 {
+  background-color: rgba(24, 126, 151, 0.541);
+  border-color: rgba(18, 164, 231, 0.575);
+  transform: skew(40deg);
+}
+.mouse__cursor.s6 {
+  background-color: rgba(26, 24, 151, 0.541);
+  border-color: rgba(18, 32, 231, 0.575);
+  transform: scale(0.3);
+}
+.mouse__cursor.s7 {
+  background-color: rgba(151, 24, 140, 0.541);
+  border-color: rgba(231, 18, 178, 0.575);
+  transform: scale(10);
+  border-radius: 0px;
+}
+.mouse__cursor.s8 {
+  background-color: rgba(104, 24, 151, 0.541);
+  border-color: rgba(181, 18, 231, 0.575);
+  transform: scale(10) skew(140deg) rotate(200deg);
+  border-radius: 0px;
+}
+
+.mouse__text {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mouse__text p {
+  font-size: 2vw;
+  line-height: 1.9;
+}
+.mouse__text p:last-child {
+  font-size: 3vw;
+}
+.mouse__text p span {
+  color: #eeeb3e;
+  border-bottom: 1px dashed #eeeb3e;
+}
+.mouse__info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
 }

@@ -11,8 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
+  <body id="main">
+    <div class="mouse__cursor"><img src="./src/cursor.png"/></div>
     <div class="header">
       <div class="logo">
         <div class="imgcont">
@@ -44,7 +52,14 @@
     </div>
     <div class="content">
       <!-- 문 -->
-      <button type="button" id="visitorsBtn" class="btn">
+      <button
+        type="button"
+        id="visitorsBtn"
+        class="btn"
+        data-title="Visitors"
+        data-day="2023/09/14"
+        data-text="누군가 두드리는 노크소리. 문 뒤에 누가 있을까?"
+      >
         <img class="project" src="./src/Visitors.png" alt="visitors" />
       </button>
 
@@ -57,7 +72,14 @@
       </div>
 
       <!-- 바나나 -->
-      <button type="button" id="BananaBtn" class="btn">
+      <button
+        type="button"
+        id="BananaBtn"
+        class="btn"
+        data-title="Custom-Banana"
+        data-day="2023/09/20"
+        data-text="개성 있는 시대! 이제는 바나나도 개성 넘치게 꾸며보세요."
+      >
         <img class="projectBanana" src="./src/Banana.png" alt="banana" />
       </button>
 
@@ -72,7 +94,14 @@
       </div>
 
       <!-- 햄버거 -->
-      <button type="button" id="hamburgerBtn" class="btn">
+      <button
+        type="button"
+        id="hamburgerBtn"
+        class="btn"
+        data-title="Hamburger"
+        data-day="2023/10/19"
+        data-text="내가 좋아하는 것만 잔뜩 햄버거. 마음껏 만들고 먹을 수 있다."
+      >
         <img class="sizeMproject" src="./src/Hamburger.png" alt="Hamburger" />
       </button>
 
@@ -86,7 +115,15 @@
         </p>
       </div>
       <!-- clock -->
-      <button type="button" id="clockBtn" class="btn">
+      <button
+        type="button"
+        id="clockBtn"
+        class="btn"
+        data-title="LAZY-ALARM"
+        data-day="2023/10/05"
+        data-text="과제를 해야할 때 자꾸만 침대로 가고 싶고, 눕고싶나요? 컴퓨터 앞에
+        딱!붙어 있게 만들어드릴게요."
+      >
         <img class="sizeMproject" src="./src/Clock.png" alt="Clock" />
       </button>
 
@@ -102,7 +139,17 @@
       </div>
 
       <!-- Adjective Gene -->
-      <button type="button" id="geneBtn" class="btn">
+      <button
+        type="button"
+        id="geneBtn"
+        class="btn"
+        data-title="Adjective Gene"
+        data-day="2023/11/25"
+        data-text="디자이너는 자신만의 고유함을 기반으로 다채로운 즐거움과 가능성을
+        제시합니다다.산업디자인전공 제41회 졸업전시회 <형용사적 유전자
+        adjective gene>에서는 자신만의 형용사적 유전자들을 발견해 온
+        전시자들의 태도들을 엿볼 수 있습니다."
+      >
         <img class="projectBanana" src="./src/Gene.png" alt="Gene" />
       </button>
 
@@ -127,62 +174,110 @@
 시계 - https://joohyeji.github.io/LAZY-ALARM/ -->
     <div class="Carousel">
       <section id="slider">
-        <input type="radio" name="slider" id="s1" checked />
-        <input type="radio" name="slider" id="s2" />
-        <input type="radio" name="slider" id="s3" />
-        <input type="radio" name="slider" id="s4" />
-        <input type="radio" name="slider" id="s5" />
+        <input
+          type="radio"
+          name="slider"
+          id="s1"
+          data-title="Visitors"
+          data-day="2023/09/14"
+          data-text="누군가 두드리는 노크소리. 문 뒤에 누가 있을까?"
+        />
+        <input
+          type="radio"
+          name="slider"
+          id="s2"
+          data-title="Custom-Banana"
+          data-day="2023/09/20"
+          data-text="개성 있는 시대! 이제는 바나나도 개성 넘치게 꾸며보세요."
+        />
+        <input
+          type="radio"
+          name="slider"
+          id="s3"
+          data-title="Hamburger"
+          data-day="2023/10/19"
+          data-text="내가 좋아하는 것만 잔뜩 햄버거. 마음껏 만들고 먹을 수 있다."
+        />
+        <input
+          type="radio"
+          name="slider"
+          id="s4"
+          data-title="LAZY-ALARM"
+          data-day="2023/10/05"
+          data-text="과제를 해야할 때 자꾸만 침대로 가고 싶고, 눕고싶나요? 컴퓨터 앞에
+        딱!붙어 있게 만들어드릴게요."
+        />
+        <input
+          type="radio"
+          name="slider"
+          id="s5"
+          data-title="Adjective Gene"
+          data-day="2023/11/25"
+          data-text="디자이너는 자신만의 고유함을 기반으로 다채로운 즐거움과 가능성을
+        제시합니다다.산업디자인전공 제41회 졸업전시회 <형용사적 유전자
+        adjective gene>에서는 자신만의 형용사적 유전자들을 발견해 온
+        전시자들의 태도들을 엿볼 수 있습니다."
+        />
 
-        <label for="s1" id="slide1"
-          ><iframe
+        <label for="s1" id="slide1" class="labels">
+          <iframe
             src="https://joohyeji.github.io/Visitors/"
             title="문"
             width="100%"
-            height="100%"
+            height="100%"  
           ></iframe>
-        <!-- <img src="./src/Thumbnail1.png" /> -->
-      </label>
+          <!-- <img src="./src/Thumbnail1.png" /> -->
+        </label>
 
-        <label for="s2" id="slide2"
-          ><iframe
+        <label for="s2" id="slide2" class="labels">
+          <iframe
             src="https://joohyeji.github.io/Custom-Banana/"
             title="바나나"
             width="100%"
-            height="100%"
+            height="100%"  
           ></iframe>
-        <!-- <img src="./src/Thumbnail2.png" /> -->
+          <!-- <img src="./src/Thumbnail2.png" /> -->
         </label>
 
-        <label for="s3" id="slide3"
-          ><iframe
+        <label for="s3" id="slide3" class="labels">
+          <iframe
             src="https://joohyeji.github.io/Hamburger/"
             title="햄버거"
-            width="100%"
-            height="100%"
+            width="90%"
+            height="50%"  
           ></iframe>
-        <!-- <img src="./src/Thumbnail3.png" /> -->
+          <!-- <img src="./src/Thumbnail3.png" /> -->
         </label>
 
-        <label for="s4" id="slide4"
-          ><iframe
+        <label for="s4" id="slide4" class="labels">
+          <iframe
             src="https://joohyeji.github.io/LAZY-ALARM/"
             title="알람"
-            width="100%"
-            height="100%"
+            width="90%"
+            height="90%" 
           ></iframe>
-        <!-- <img src="./src/Thumbnail4.png" /> -->
+          <!-- <img src="./src/Thumbnail4.png" /> -->
         </label>
 
-        <label for="s5" id="slide5"
-          ><iframe
+        <label for="s5" id="slide5" class="labels">
+          <iframe
             src="http://stid-gradshow.seoultech.ac.kr/"
             title="졸전"
-            width="100%"
-            height="100%"
+            width="90%"
+            height="90%" 
           ></iframe>
-        <!-- <img src="./src/Thumbnail5.png" /> -->
+          <!-- <img src="./src/Thumbnail5.png" /> -->
         </label>
       </section>
+      <i id="closeBtn" class="fas fa-xmark fa-5x"></i>
+
+      <div class="label" id="carouselLabel">
+        <div class="titleCont">
+          <p class="title" id="popupTitle"></p>
+          <p class="day" id="popupDay"></p>
+        </div>
+        <p class="textCont" id="popupTextcont"></p>
+      </div>
     </div>
 
     <!-- 푸터 -->
@@ -194,14 +289,89 @@
       // 버튼 클릭시 블러팝업
       document.querySelectorAll('.btn').forEach((v, i) => {
         v.addEventListener('click', (e) => {
+          console.log(e.currentTarget);
           const popup = document.querySelector('.Carousel');
+          const closeBtn = document.querySelector('#closeBtn');
+          const radioButtons = document.querySelectorAll('[name="slider"]');
+
+          // 클릭된 버튼의 인덱스를 찾습니다.
+          const index = Array.from(document.querySelectorAll('.btn')).indexOf(
+            e.currentTarget
+          );
+
+          // 해당하는 라디오 버튼을 체크합니다.
+          radioButtons[index].checked = true;
+
+          // 팝업을 보이도록 설정합니다.
           popup.style.display = 'block';
 
-          popup.addEventListener('click', (e) => {
+          // 닫기 버튼에 클릭 이벤트 리스너를 추가합니다.
+          closeBtn.addEventListener('click', (e) => {
+            // 팝업을 감추도록 설정합니다.
             popup.style.display = 'none';
           });
+
+          const title = e.currentTarget.dataset.title;
+          const day = e.currentTarget.dataset.day;
+          const titleCont = e.currentTarget.dataset.text;
+
+          const iframeLabel = document.querySelectorAll('.labels');
+          console.log('iframeLabel',iframeLabel[0]);
+
+          //라벨내용바뀌는 이벤트
+          document.getElementById('popupTitle').innerHTML = title;
+          document.querySelector('#popupDay').innerHTML = day;
+          document.querySelector('#popupTextcont').innerHTML = titleCont;
+          // 라디오 체크 상태 변경 이벤트
+          document
+            .querySelectorAll('[name="slider"]')
+            .forEach((radio, index) => {
+              radio.addEventListener('change', () => {
+                //라벨변경
+                const title = radio.dataset.title;
+                const day = radio.dataset.day;
+                const titleCont = radio.dataset.text;
+                console.log('라디오 체크 상태 변경:', radio);
+                document.getElementById('popupTitle').innerHTML = title;
+                document.querySelector('#popupDay').innerHTML = day;
+                document.querySelector('#popupTextcont').innerHTML = titleCont;
+              });
+            });
         });
       });
+
+      // 마우스
+      window.addEventListener("mousemove", function(event){
+    document.querySelector(".clientX").innerHTML = event.clientX;
+    document.querySelector(".clientY").innerHTML = event.clientY;
+    document.querySelector(".offsetX").innerHTML = event.offsetX;
+    document.querySelector(".offsetY").innerHTML = event.offsetY;
+    document.querySelector(".pageX").innerHTML = event.pageX;
+    document.querySelector(".pageY").innerHTML = event.pageY;
+    document.querySelector(".screenX").innerHTML = event.screenX;
+    document.querySelector(".screenY").innerHTML = event.screenY;
+});
+
+// 선택자
+const cursor = document.querySelector(".mouse__cursor");
+const mouseinfo = document.querySelectorAll(".mouse__text ul li span");
+
+window.addEventListener("mousemove", function(e){
+    cursor.style.left = e.clientX -25 + "px";
+    cursor.style.top = e.clientY -25 + "px";
+});
+
+//getAttribute();
+document.querySelectorAll(".mouse__text span").forEach(function(span){
+    let attr = span.getAttribute("class");
+    //attr = s1 s2 s3 s4 s5 s6 s7 s8
+    span.addEventListener("mouseover", function(){
+        cursor.classList.add(attr);
+    });
+    span.addEventListener("mouseout", function(){
+        cursor.classList.remove(attr);
+    });
+});
     </script>
   </body>
 </html>
