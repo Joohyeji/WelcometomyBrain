@@ -365,48 +365,6 @@ iframe html, iframe body, img html, img body{
   width: 50px;
   height: auto;
 }
-.mouse__cursor.s1 {
-  background-color: rgba(151, 24, 24, 0.377);
-  border-color: rgba(231, 18, 18, 0.438);
-}
-.mouse__cursor.s2 {
-  background-color: rgba(151, 100, 24, 0.541);
-  border-color: rgba(231, 132, 18, 0.575);
-  transform: scale(2) rotateY(360deg);
-}
-.mouse__cursor.s3 {
-  background-color: rgba(151, 149, 24, 0.541);
-  border-color: rgba(227, 231, 18, 0.575);
-  transform: scale(1.5) rotateX(545deg);
-}
-.mouse__cursor.s4 {
-  background-color: rgba(54, 151, 24, 0.541);
-  border-color: rgba(18, 231, 64, 0.575);
-  transform: scale(10);
-}
-.mouse__cursor.s5 {
-  background-color: rgba(24, 126, 151, 0.541);
-  border-color: rgba(18, 164, 231, 0.575);
-  transform: skew(40deg);
-}
-.mouse__cursor.s6 {
-  background-color: rgba(26, 24, 151, 0.541);
-  border-color: rgba(18, 32, 231, 0.575);
-  transform: scale(0.3);
-}
-.mouse__cursor.s7 {
-  background-color: rgba(151, 24, 140, 0.541);
-  border-color: rgba(231, 18, 178, 0.575);
-  transform: scale(10);
-  border-radius: 0px;
-}
-.mouse__cursor.s8 {
-  background-color: rgba(104, 24, 151, 0.541);
-  border-color: rgba(181, 18, 231, 0.575);
-  transform: scale(10) skew(140deg) rotate(200deg);
-  border-radius: 0px;
-}
-
 .mouse__text {
   width: 100%;
   height: 100vh;
