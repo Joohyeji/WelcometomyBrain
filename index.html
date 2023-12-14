@@ -280,6 +280,12 @@
       </div>
     </div>
 
+    <!-- 면허증 html -->
+    <!-- <div class="Carousel2">
+      <i id="closeBtn" class="fas fa-xmark fa-5x"></i>
+      
+    </div> -->
+
     <!-- 푸터 -->
     <div class="footer">
       <span>what’s in my head / ⓒ Joohyeji</span>
@@ -358,7 +364,109 @@ document.querySelectorAll(".mouse__text span").forEach(function(span){
     span.addEventListener("mouseout", function(){
         cursor.classList.remove(attr);
     });
+});document.addEventListener("DOMContentLoaded", function () {
+  const wruText = document.querySelector('.wru');
+
+  window.addEventListener("mousemove", function (e) {
+    const randomColor = getRandomColor();
+    wruText.style.color = randomColor;
+  });
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 });
+// 마우스 커서에 따라 wru 색상 바뀜
+document.addEventListener("DOMContentLoaded", function () {
+  const wruText = document.querySelector('.wru');
+
+  let currentColor = getRandomColor();
+  wruText.style.color = currentColor;
+
+  let lastMouseX = 0;
+  let lastMouseY = 0;
+
+  window.addEventListener("mousemove", function (e) {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const distance = Math.sqrt(
+      Math.pow(mouseX - lastMouseX, 2) + Math.pow(mouseY - lastMouseY, 2)
+    );
+
+    if (distance >= 1000) {
+      const targetColor = getRandomColor();
+      smoothColorTransition(currentColor, targetColor, wruText);
+      currentColor = targetColor;
+
+      lastMouseX = mouseX;
+      lastMouseY = mouseY;
+    }
+  });
+
+  wruText.addEventListener("mouseenter", function () {
+    wruText.classList.add("rainbow-hover");
+  });
+
+  wruText.addEventListener("mouseleave", function () {
+    wruText.classList.remove("rainbow-hover");
+  });
+
+  function smoothColorTransition(startColor, endColor, element) {
+    const steps = 30;
+    let step = 0;
+
+    const startRGB = hexToRgb(startColor);
+    const endRGB = hexToRgb(endColor);
+
+    const interval = setInterval(function () {
+      step++;
+      if (step > steps) {
+        clearInterval(interval);
+      }
+
+      const currentRGB = interpolateColor(startRGB, endRGB, step / steps);
+      const currentHex = rgbToHex(currentRGB);
+
+      element.style.color = currentHex;
+    }, 10);
+  }
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function hexToRgb(hex) {
+    const bigint = parseInt(hex.substring(1), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return { r, g, b };
+  }
+
+  function rgbToHex(rgb) {
+    return `#${(1 << 24 | rgb.r << 16 | rgb.g << 8 | rgb.b).toString(16).slice(1)}`;
+  }
+
+  function interpolateColor(startColor, endColor, progress) {
+    return {
+      r: Math.floor(startColor.r + (endColor.r - startColor.r) * progress),
+      g: Math.floor(startColor.g + (endColor.g - startColor.g) * progress),
+      b: Math.floor(startColor.b + (endColor.b - startColor.b) * progress),
+    };
+  }
+});
+
     </script>
   </body>
 </html>
